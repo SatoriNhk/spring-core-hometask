@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:properties/auditoriums.properties</value>
+            </list>
+        </property>
+    </bean>
+    <import resource="discount_strategies.xml"/>
+
+    <bean id="conversionService"
+          class="org.springframework.context.support.ConversionServiceFactoryBean" />
+
+
+    <bean id="auditorium_service" class="ua.epam.spring.hometask.service.AuditoriumServiceImpl">
+        <property name = "auditoriumSet">
+            <set>
+                <bean id="auditorium1" class="ua.epam.spring.hometask.domain.Auditorium">
+                    <property name="name" value="${auditorium1.name}"/>
+                    <property name="numberOfSeats" value="${auditorium1.numberOfSeats}"/>
+                    <property name="vipSeats" value="${auditorium1.vipSeats}"/>
+                </bean>
+                <bean id="auditorium2" class="ua.epam.spring.hometask.domain.Auditorium">
+                    <property name="name" value="${auditorium2.name}"/>
+                    <property name="numberOfSeats" value="${auditorium2.numberOfSeats}"/>
+                    <property name="vipSeats" value="${auditorium2.vipSeats}"/>
+                </bean>
+                <bean id="auditorium3" class="ua.epam.spring.hometask.domain.Auditorium">
+                    <property name="name" value="${auditorium3.name}"/>
+                    <property name="numberOfSeats" value="${auditorium3.numberOfSeats}"/>
+                    <property name="vipSeats" value="${auditorium3.vipSeats}"/>
+                </bean>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="booking_service" class="ua.epam.spring.hometask.service.BookingServiceImpl">
+        <constructor-arg name="discountService" ref="discount_service"/>
+        <constructor-arg name="ticketRepository" ref="ticket_repository"/>
+    </bean>
+    <bean id="user_service" class="ua.epam.spring.hometask.service.UserServiceImpl"/>
+    <bean id="event_service" class="ua.epam.spring.hometask.service.EventServiceImpl"/>
+
+    <bean id="ticket_repository" class="ua.epam.spring.hometask.repositories.TicketRepository"/>
+    <bean id="user_repository" class="ua.epam.spring.hometask.repositories.UserRepository"/>
+    <bean id="event_repository" class="ua.epam.spring.hometask.repositories.EventRepository"/>
+
+</beans>
