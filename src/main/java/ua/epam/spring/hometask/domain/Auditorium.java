@@ -1,5 +1,8 @@
 package ua.epam.spring.hometask.domain;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Objects;
@@ -7,9 +10,11 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.LongStream;
 
+
 /**
  * @author Yuriy_Tkach
  */
+
 public class Auditorium {
 
     private String name;
@@ -21,9 +26,13 @@ public class Auditorium {
     public Auditorium() {
     }
 
+    public Auditorium(String name) {
+        this.name = name;
+    }
+
     /**
      * Counts how many vip seats are there in supplied <code>seats</code>
-     * 
+     *
      * @param seats
      *            Seats to process
      * @return number of vip seats in request
@@ -47,7 +56,7 @@ public class Auditorium {
     public void setNumberOfSeats(long numberOfSeats) {
         this.numberOfSeats = numberOfSeats;
     }
-    
+
     public Set<Long> getAllSeats() {
         return LongStream.range(1, numberOfSeats+1).boxed().collect(Collectors.toSet());
     }
@@ -88,3 +97,4 @@ public class Auditorium {
     }
 
 }
+

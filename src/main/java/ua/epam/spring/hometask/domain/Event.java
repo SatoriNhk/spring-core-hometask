@@ -1,5 +1,7 @@
 package ua.epam.spring.hometask.domain;
 
+import org.springframework.stereotype.Component;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.*;
@@ -7,6 +9,8 @@ import java.util.*;
 /**
  * @author Yuriy_Tkach
  */
+
+@Component
 public class Event extends DomainObject {
 
     private String name;

@@ -1,5 +1,7 @@
 package ua.epam.spring.hometask.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ua.epam.spring.hometask.domain.Auditorium;
 import ua.epam.spring.hometask.domain.Event;
 import ua.epam.spring.hometask.domain.Ticket;
@@ -12,13 +14,13 @@ import java.time.LocalDateTime;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+@Service
 public class BookingServiceImpl implements BookingService {
 
     private DiscountService discountService;
     private TicketRepository ticketRepository;
-    /*private TicketRepository userRepository;
-    private EventRepository eventRepository;*/
 
+    @Autowired
     public BookingServiceImpl(DiscountService discountService, TicketRepository ticketRepository) {
         this.discountService = discountService;
         this.ticketRepository = ticketRepository;

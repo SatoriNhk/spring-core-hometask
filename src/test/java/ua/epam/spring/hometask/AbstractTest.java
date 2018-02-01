@@ -21,7 +21,7 @@ public abstract class AbstractTest {
     @Autowired
     private AuditoriumService auditoriumService;
 
-    @Autowired
+    /*@Autowired
     private UserRepository userRepository;
 
     @Autowired
@@ -29,7 +29,7 @@ public abstract class AbstractTest {
 
     @Autowired
     private TicketRepository ticketRepository;
-
+    */
     private static User user1 = new User();
     private static User user2 = new User();
     private static Event event1 = new Event();

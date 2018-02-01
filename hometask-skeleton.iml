@@ -5,6 +5,7 @@
       <configuration>
         <fileset id="fileset" name="Spring" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/spring.xml</file>
+          <file>file://$MODULE_DIR$/src/main/java/ua/epam/spring/hometask/config/AppConfig.java</file>
         </fileset>
       </configuration>
     </facet>
@@ -31,5 +32,9 @@
     <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.12" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains:annotations:15.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aspects:3.2.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.7.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:3.2.0.RELEASE" level="project" />
   </component>
 </module>
