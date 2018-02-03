@@ -9,6 +9,7 @@ import ua.epam.spring.hometask.AbstractTest;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class BookingServiceImplTest extends AbstractTest {
 
+
     @Before
     public void init() throws Exception {
     }

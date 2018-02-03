@@ -1,41 +1,39 @@
 package ua.epam.spring.hometask;
 
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.ContextConfiguration;
+import ua.epam.spring.hometask.config.AppConfig;
 import ua.epam.spring.hometask.domain.*;
-import ua.epam.spring.hometask.repositories.EventRepository;
-import ua.epam.spring.hometask.repositories.TicketRepository;
-import ua.epam.spring.hometask.repositories.UserRepository;
 import ua.epam.spring.hometask.service.AuditoriumService;
 
+import javax.annotation.PostConstruct;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.*;
 
-@RunWith(SpringJUnit4ClassRunner.class)
 
+@ContextConfiguration(classes = AppConfig.class)
 public abstract class AbstractTest {
 
     @Autowired
     private AuditoriumService auditoriumService;
-
-    /*@Autowired
+/*
+    @Autowired
     private UserRepository userRepository;
 
     @Autowired
     private EventRepository eventRepository;
 
     @Autowired
-    private TicketRepository ticketRepository;
-    */
-    private static User user1 = new User();
-    private static User user2 = new User();
-    private static Event event1 = new Event();
-    private static Event event2 = new Event();
-    private static Event event3 = new Event();
-    private static Set<Ticket> user1Tickets;
+    private TicketRepository ticketRepository;*/
+
+    protected  User user1 = new User();
+    protected  User user2 = new User();
+    protected Event event1 = new Event();
+    protected Event event2 = new Event();
+    protected Event event3 = new Event();
+    protected static Set<Ticket> user1Tickets = new TreeSet<>();
     private static Ticket ticket1 = new Ticket();
     private static Ticket ticket2 = new Ticket();
     private static Ticket ticket3 = new Ticket();
@@ -56,13 +54,11 @@ public abstract class AbstractTest {
     protected static Set<User> users;
     protected static Set<Event> events;
     protected static Set<Ticket> tickets;
-    protected static Map<String, Auditorium> auditoriumMap;
+    protected static Map<String, Auditorium> auditoriumMap = new HashMap<>();
+    protected Set<Auditorium> auditoriums;
 
-    public AbstractTest() {
-        initialize();
-    }
-
-    protected void initialize() {
+    @PostConstruct
+    protected void initData() {
         user1.setId(1L);
         user1.setFirstName("Anna");
         user1.setLastName("Malahova");
@@ -79,7 +75,8 @@ public abstract class AbstractTest {
         users.add(user1);
         users.add(user2);
 
-        Set<Auditorium> auditoriums = auditoriumService.getAll();
+        auditoriums = auditoriumService.getAll();
+        auditoriumMap = new HashMap<>();
         auditoriums.forEach(a -> auditoriumMap.put(a.getName(), a));
 
 

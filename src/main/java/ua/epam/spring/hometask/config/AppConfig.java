@@ -4,10 +4,7 @@ import org.springframework.context.annotation.*;
 import ua.epam.spring.hometask.repositories.EventRepository;
 import ua.epam.spring.hometask.repositories.TicketRepository;
 import ua.epam.spring.hometask.repositories.UserRepository;
-import ua.epam.spring.hometask.service.EventService;
-import ua.epam.spring.hometask.service.EventServiceImpl;
-import ua.epam.spring.hometask.service.UserService;
-import ua.epam.spring.hometask.service.UserServiceImpl;
+import ua.epam.spring.hometask.service.*;
 
 @Configuration
 @Import(AuditoriumConfig.class)
