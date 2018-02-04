@@ -12,9 +12,8 @@ import java.util.Set;
 @Service
 public class AuditoriumServiceImpl implements AuditoriumService {
 
-
     private Set<Auditorium> auditoriumSet;
-
+    
     @Autowired
     public AuditoriumServiceImpl(Set<Auditorium> auditoriumSet) {
         this.auditoriumSet = auditoriumSet;

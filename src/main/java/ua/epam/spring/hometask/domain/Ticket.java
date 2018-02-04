@@ -9,7 +9,7 @@ import java.util.Objects;
  * @author Yuriy_Tkach
  */
 
-@Component
+
 public class Ticket extends DomainObject implements Comparable<Ticket> {
 
     private User user;

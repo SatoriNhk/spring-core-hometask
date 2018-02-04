@@ -1,41 +1,39 @@
 package ua.epam.spring.hometask;
 
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.ContextConfiguration;
+import ua.epam.spring.hometask.config.AppConfig;
 import ua.epam.spring.hometask.domain.*;
-import ua.epam.spring.hometask.repositories.EventRepository;
-import ua.epam.spring.hometask.repositories.TicketRepository;
-import ua.epam.spring.hometask.repositories.UserRepository;
 import ua.epam.spring.hometask.service.AuditoriumService;
 
+import javax.annotation.PostConstruct;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.*;
 
-@RunWith(SpringJUnit4ClassRunner.class)
 
+@ContextConfiguration(classes = AppConfig.class)
 public abstract class AbstractTest {
 
     @Autowired
     private AuditoriumService auditoriumService;
-
-    /*@Autowired
+/*
+    @Autowired
     private UserRepository userRepository;
 
     @Autowired
     private EventRepository eventRepository;
 
     @Autowired
-    private TicketRepository ticketRepository;
-    */
-    private static User user1 = new User();
-    private static User user2 = new User();
-    private static Event event1 = new Event();
-    private static Event event2 = new Event();
-    private static Event event3 = new Event();
-    private static Set<Ticket> user1Tickets;
+    private TicketRepository ticketRepository;*/
+
+    protected User user1 = new User();
+    protected User user2 = new User();
+    protected Event event1 = new Event();
+    protected Event event2 = new Event();
+    protected Event event3 = new Event();
+    protected static Set<Ticket> user1Tickets = new TreeSet<>();
     private static Ticket ticket1 = new Ticket();
     private static Ticket ticket2 = new Ticket();
     private static Ticket ticket3 = new Ticket();
@@ -43,26 +41,24 @@ public abstract class AbstractTest {
     private static LocalDate localDate1 = LocalDate.of(1990, 10, 21);
     private static LocalDate localDate2 = LocalDate.of(1992, 8, 11);
     private static LocalDateTime localDateTime1 = LocalDateTime.of(LocalDate.of(2017, 10, 11),
-            LocalTime.of(21, 30, 0 ));
-    private static LocalDateTime localDateTime2 = LocalDateTime.of(LocalDate.of(2017, 10, 14),
-            LocalTime.of(20, 0, 0 ));
+            LocalTime.of(21, 30, 0));
+    protected static LocalDateTime localDateTime2 = LocalDateTime.of(LocalDate.of(2017, 10, 14),
+            LocalTime.of(20, 0, 0));
     private static LocalDateTime localDateTime3 = LocalDateTime.of(LocalDate.of(2017, 10, 15),
-            LocalTime.of(18, 30, 0 ));
+            LocalTime.of(18, 30, 0));
     private static LocalDateTime localDateTime4 = LocalDateTime.of(LocalDate.of(2017, 10, 20),
-            LocalTime.of(21, 30, 0 ));
+            LocalTime.of(21, 30, 0));
     private static LocalDateTime localDateTime5 = LocalDateTime.of(LocalDate.of(2017, 10, 20),
-            LocalTime.of(0, 30, 0 ));
+            LocalTime.of(0, 30, 0));
 
     protected static Set<User> users;
     protected static Set<Event> events;
     protected static Set<Ticket> tickets;
-    protected static Map<String, Auditorium> auditoriumMap;
+    protected static Map<String, Auditorium> auditoriumMap = new HashMap<>();
+    protected Set<Auditorium> auditoriums;
 
-    public AbstractTest() {
-        initialize();
-    }
-
-    protected void initialize() {
+    @PostConstruct
+    protected void initData() {
         user1.setId(1L);
         user1.setFirstName("Anna");
         user1.setLastName("Malahova");
@@ -79,7 +75,8 @@ public abstract class AbstractTest {
         users.add(user1);
         users.add(user2);
 
-        Set<Auditorium> auditoriums = auditoriumService.getAll();
+        auditoriums = auditoriumService.getAll();
+        auditoriumMap = new HashMap<>();
         auditoriums.forEach(a -> auditoriumMap.put(a.getName(), a));
 
 
@@ -95,7 +92,7 @@ public abstract class AbstractTest {
         event2.setName("1+1");
         event2.setBasePrice(400.0);
         event2.setRating(EventRating.MID);
-        event2.setAirDates(new TreeSet<>(Arrays.asList( localDateTime3, localDateTime4)));
+        event2.setAirDates(new TreeSet<>(Arrays.asList(localDateTime3, localDateTime4)));
         NavigableMap<LocalDateTime, Auditorium> map2 = new TreeMap<>();
         map2.put(localDateTime3, auditoriumMap.get("IMax"));
         map2.put(localDateTime4, auditoriumMap.get("ZoneOne"));

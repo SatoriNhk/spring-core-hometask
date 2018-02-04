@@ -11,7 +11,7 @@ import java.util.TreeSet;
  * @author Yuriy_Tkach
  */
 
-@Component
+
 public class User extends DomainObject {
 
     private String firstName;

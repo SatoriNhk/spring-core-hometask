@@ -10,7 +10,6 @@ import java.util.*;
  * @author Yuriy_Tkach
  */
 
-@Component
 public class Event extends DomainObject {
 
     private String name;

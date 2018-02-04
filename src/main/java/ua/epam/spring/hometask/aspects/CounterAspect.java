@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 import ua.epam.spring.hometask.counters.EventCounter;
 import ua.epam.spring.hometask.domain.Event;
 import ua.epam.spring.hometask.domain.Ticket;
-import ua.epam.spring.hometask.service.DiscountStrategyService;
 
 import java.util.Arrays;
 import java.util.List;
