@@ -43,8 +43,13 @@
         <constructor-arg name="discountService" ref="discount_service"/>
         <constructor-arg name="ticketRepository" ref="ticket_repository"/>
     </bean>
-    <bean id="user_service" class="ua.epam.spring.hometask.service.UserServiceImpl"/>
-    <bean id="event_service" class="ua.epam.spring.hometask.service.EventServiceImpl"/>
+    <bean id="user_service" class="ua.epam.spring.hometask.service.UserServiceImpl">
+    <constructor-arg name="userRepository" ref="user_repository"/>
+    </bean>
+
+    <bean id="event_service" class="ua.epam.spring.hometask.service.EventServiceImpl">
+        <constructor-arg name="eventRepository" ref="event_repository"/>
+    </bean>
 
     <bean id="ticket_repository" class="ua.epam.spring.hometask.repositories.TicketRepository"/>
     <bean id="user_repository" class="ua.epam.spring.hometask.repositories.UserRepository"/>

@@ -42,13 +42,13 @@ public abstract class AbstractTest {
     private static LocalDate localDate2 = LocalDate.of(1992, 8, 11);
     private static LocalDateTime localDateTime1 = LocalDateTime.of(LocalDate.of(2017, 10, 11),
             LocalTime.of(21, 30, 0 ));
-    private static LocalDateTime localDateTime2 = LocalDateTime.of(LocalDate.of(2017, 10, 14),
+    protected static LocalDateTime localDateTime2 = LocalDateTime.of(LocalDate.of(2017, 10, 14),
             LocalTime.of(20, 0, 0 ));
-    private static LocalDateTime localDateTime3 = LocalDateTime.of(LocalDate.of(2017, 10, 15),
+    protected static LocalDateTime localDateTime3 = LocalDateTime.of(LocalDate.of(2017, 10, 15),
             LocalTime.of(18, 30, 0 ));
-    private static LocalDateTime localDateTime4 = LocalDateTime.of(LocalDate.of(2017, 10, 20),
+    protected static LocalDateTime localDateTime4 = LocalDateTime.of(LocalDate.of(2017, 10, 20),
             LocalTime.of(21, 30, 0 ));
-    private static LocalDateTime localDateTime5 = LocalDateTime.of(LocalDate.of(2017, 10, 20),
+    protected static LocalDateTime localDateTime5 = LocalDateTime.of(LocalDate.of(2017, 10, 20),
             LocalTime.of(0, 30, 0 ));
 
     protected static Set<User> users;

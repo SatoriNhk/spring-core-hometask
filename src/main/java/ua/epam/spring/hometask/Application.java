@@ -12,6 +12,9 @@ import ua.epam.spring.hometask.service.UserServiceImpl;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Properties;
@@ -19,7 +22,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Application {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
         //ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
 
@@ -36,6 +39,11 @@ public class Application {
             System.out.println(entry.getKey() + ": " + entry.getValue().getName());
         }
 
+        Connection conn = DriverManager.
+                getConnection("jdbc:h2:mem:testdb", "sa", "");
+        conn.prepareCall("INSERT INTO event_counter VALUES(1, 1, 1)");
+
+        conn.close();
 
     }
 }

@@ -43,7 +43,6 @@ public class AuditoriumConfig {
         return new PropertySourcesPlaceholderConfigurer();
     }
 
-
     @Bean
     public Auditorium auditorium2() {
         return new Auditorium(name2,
