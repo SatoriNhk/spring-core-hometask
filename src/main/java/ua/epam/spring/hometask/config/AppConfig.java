@@ -11,7 +11,7 @@ import ua.epam.spring.hometask.service.*;
 @ComponentScan({"ua.epam.spring.hometask"})
 @EnableAspectJAutoProxy
 public class AppConfig {
-    /*@Bean
+    @Bean
     public EventServiceImpl eventService() {
         return new EventServiceImpl(eventRepository());
     }
@@ -34,5 +34,5 @@ public class AppConfig {
     @Bean
     public UserRepository userRepository() {
         return new UserRepository();
-    }*/
+    }
 }

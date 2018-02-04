@@ -2,12 +2,10 @@ package ua.epam.spring.hometask.service;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import ua.epam.spring.hometask.AbstractTest;
 import ua.epam.spring.hometask.domain.*;
 import ua.epam.spring.hometask.repositories.TicketRepository;
@@ -17,7 +15,6 @@ import java.util.*;
 
 import static org.mockito.Mockito.when;
 
-@RunWith(SpringJUnit4ClassRunner.class)
 public class BookingServiceImplTest extends AbstractTest {
 
     @Mock
@@ -37,7 +34,7 @@ public class BookingServiceImplTest extends AbstractTest {
 
     @InjectMocks
     @Autowired
-    private BookingService bookingService;
+    private BookingServiceImpl bookingService;
 
     @Before
     public void initMock() {
@@ -49,7 +46,7 @@ public class BookingServiceImplTest extends AbstractTest {
     public void getTicketsPrice() throws Exception {
         User user = user1;// USER
         LocalDateTime data = LocalDateTime.of(1900, 12, 12, 2, 2);
-        Set<Long> seats = new TreeSet<>(Arrays.asList(10L, 11L, 12L, 13L, 14L));//SEAT
+        Set<Long> seats = new TreeSet<>(Arrays.asList(10L, 11L, 12L, 13L, 14L));
 
         when(event.getAuditoriums()).thenReturn(test);
         //when(event.getAuditoriums().get(data)).thenReturn(auditorium);
@@ -63,18 +60,7 @@ public class BookingServiceImplTest extends AbstractTest {
     }
 
     @Test
-    public void bookTickets() throws Exception {
-    }
-
-
-    @Test
     public void getPurchasedTicketsForEvent() throws Exception {
-        //LocalDateTime data = LocalDateTime.of(1900,12,12,2,2);
-        /*Ticket TicketOne = new Ticket(user1,event,data,42);
-        Ticket TicketTwo = new Ticket(user1,event,data,43);
-        Ticket TicketThree = new Ticket(user1,event2,data,44);
-        */
-        //Set<Ticket> TicketList = new TreeSet<>(Arrays.asList(TicketOne,TicketTwo,TicketThree));
         when(ticketRepository.getAll()).thenReturn(tickets);
         Set<Ticket> Result = bookingService.getPurchasedTicketsForEvent(event3, localDateTime2);
         System.out.println("Base ticket = " + tickets);
