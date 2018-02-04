@@ -33,7 +33,7 @@ public abstract class AbstractTest {
     protected Event event1 = new Event();
     protected Event event2 = new Event();
     protected Event event3 = new Event();
-    protected static Set<Ticket> user1Tickets = new TreeSet<>();
+    protected static Set<Ticket> user1Tickets= new TreeSet<>();
     private static Ticket ticket1 = new Ticket();
     private static Ticket ticket2 = new Ticket();
     private static Ticket ticket3 = new Ticket();
