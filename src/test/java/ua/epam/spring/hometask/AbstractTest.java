@@ -28,8 +28,8 @@ public abstract class AbstractTest {
     @Autowired
     private TicketRepository ticketRepository;*/
 
-    protected  User user1 = new User();
-    protected  User user2 = new User();
+    protected User user1 = new User();
+    protected User user2 = new User();
     protected Event event1 = new Event();
     protected Event event2 = new Event();
     protected Event event3 = new Event();
@@ -38,24 +38,26 @@ public abstract class AbstractTest {
     private static Ticket ticket2 = new Ticket();
     private static Ticket ticket3 = new Ticket();
     private static Ticket ticket4 = new Ticket();
+    protected Auditorium auditoriumOne = new Auditorium();
+    protected Auditorium auditoriumTwo = new Auditorium();
+    protected Auditorium auditoriumThree = new Auditorium();
     private static LocalDate localDate1 = LocalDate.of(1990, 10, 21);
     private static LocalDate localDate2 = LocalDate.of(1992, 8, 11);
     private static LocalDateTime localDateTime1 = LocalDateTime.of(LocalDate.of(2017, 10, 11),
-            LocalTime.of(21, 30, 0 ));
+            LocalTime.of(21, 30, 0));
     protected static LocalDateTime localDateTime2 = LocalDateTime.of(LocalDate.of(2017, 10, 14),
-            LocalTime.of(20, 0, 0 ));
-    protected static LocalDateTime localDateTime3 = LocalDateTime.of(LocalDate.of(2017, 10, 15),
-            LocalTime.of(18, 30, 0 ));
-    protected static LocalDateTime localDateTime4 = LocalDateTime.of(LocalDate.of(2017, 10, 20),
-            LocalTime.of(21, 30, 0 ));
-    protected static LocalDateTime localDateTime5 = LocalDateTime.of(LocalDate.of(2017, 10, 20),
-            LocalTime.of(0, 30, 0 ));
+            LocalTime.of(20, 0, 0));
+    private static LocalDateTime localDateTime3 = LocalDateTime.of(LocalDate.of(2017, 10, 15),
+            LocalTime.of(18, 30, 0));
+    private static LocalDateTime localDateTime4 = LocalDateTime.of(LocalDate.of(2017, 10, 20),
+            LocalTime.of(21, 30, 0));
+    private static LocalDateTime localDateTime5 = LocalDateTime.of(LocalDate.of(2017, 10, 20),
+            LocalTime.of(0, 30, 0));
 
-    protected static Set<User> users;
-    protected static Set<Event> events;
-    protected static Set<Ticket> tickets;
+    protected static Set<User> users = new HashSet<>();
+    protected static Set<Event> events = new HashSet<>();
+    protected static Set<Ticket> tickets = new HashSet<>();
     protected static Map<String, Auditorium> auditoriumMap = new HashMap<>();
-    protected Set<Auditorium> auditoriums;
 
     @PostConstruct
     protected void initData() {
@@ -75,9 +77,26 @@ public abstract class AbstractTest {
         users.add(user1);
         users.add(user2);
 
-        auditoriums = auditoriumService.getAll();
+        /*auditoriums = auditoriumService.getAll();
         auditoriumMap = new HashMap<>();
-        auditoriums.forEach(a -> auditoriumMap.put(a.getName(), a));
+        auditoriums.forEach(a -> auditoriumMap.put(a.getName(), a));*/
+
+        auditoriumOne.setName("IMax");
+        auditoriumOne.setNumberOfSeats(70L);
+        auditoriumOne.setVipSeats(new TreeSet<>(Arrays.asList(51L, 52L, 53L)));
+
+        auditoriumTwo.setName("ZoneOne");
+        auditoriumTwo.setNumberOfSeats(40L);
+        auditoriumTwo.setVipSeats(new TreeSet<>(Arrays.asList(34L, 35L, 36L)));
+
+        auditoriumThree.setName("DolbyDigital");
+        auditoriumThree.setNumberOfSeats(30L);
+        auditoriumThree.setVipSeats(new TreeSet<>(Arrays.asList(1L, 2L, 6L)));
+
+
+        auditoriumMap.put("IMax", auditoriumOne);
+        auditoriumMap.put("ZoneOne", auditoriumTwo);
+        auditoriumMap.put("DolbyDigital", auditoriumThree);
 
 
         event1.setName("Bråvalla");
@@ -92,10 +111,10 @@ public abstract class AbstractTest {
         event2.setName("1+1");
         event2.setBasePrice(400.0);
         event2.setRating(EventRating.MID);
-        event2.setAirDates(new TreeSet<>(Arrays.asList( localDateTime3, localDateTime4)));
+        event2.setAirDates(new TreeSet<>(Arrays.asList(localDateTime3, localDateTime4)));
         NavigableMap<LocalDateTime, Auditorium> map2 = new TreeMap<>();
-        map2.put(localDateTime3, auditoriumMap.get("IMax"));
-        map2.put(localDateTime4, auditoriumMap.get("ZoneOne"));
+        map2.put(localDateTime3, auditoriumOne);
+        map2.put(localDateTime4, auditoriumTwo);
         event2.setAuditoriums(map2);
 
         event3.setName("Elki");
@@ -103,10 +122,14 @@ public abstract class AbstractTest {
         event3.setRating(EventRating.LOW);
         event3.setAirDates(new TreeSet<>(Arrays.asList(localDateTime2, localDateTime4, localDateTime5)));
         NavigableMap<LocalDateTime, Auditorium> map3 = new TreeMap<>();
-        map3.put(localDateTime2, auditoriumMap.get("IMax"));
-        map3.put(localDateTime4, auditoriumMap.get("DolbyDigital"));
-        map3.put(localDateTime5, auditoriumMap.get("ZoneOne"));
+        map3.put(localDateTime2, auditoriumOne);
+        map3.put(localDateTime4, auditoriumThree);
+        map3.put(localDateTime5, auditoriumTwo);
         event3.setAuditoriums(map3);
+
+        events.add(event1);
+        events.add(event2);
+        events.add(event3);
 
         tickets = new HashSet<>();
         for (int i = 40; i < 55; i++) {

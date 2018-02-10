@@ -2,6 +2,7 @@ package ua.epam.spring.hometask.aspects;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,8 @@ public class CounterAspect {
         this.eventCounter = eventCounter;
     }
 
-    @After("execution(* ua.epam.spring.hometask.service.EventService.getByName()) && args(event))")
+    @AfterReturning(pointcut = "execution(* ua.epam.spring.hometask.service.EventService.getByName())",
+            returning = "event")
     private void eventGetByNameCounter(Event event) {
         eventCounter.addEventGetByName(event);
     }
@@ -39,8 +41,8 @@ public class CounterAspect {
     private void eventBookedTickets(JoinPoint jp) {
         Ticket[] tickets = (Ticket[]) jp.getArgs()[0];  //TODO /*!!!!!!!!!!!! */
         List<Event> uniqueEvents = Arrays.stream(tickets).map(Ticket::getEvent).distinct().collect(Collectors.toList());
-        for (Event event: uniqueEvents
-             ) {
+        for (Event event : uniqueEvents
+                ) {
             eventCounter.addEventBookedTickets(event);
         }
     }
