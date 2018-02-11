@@ -92,8 +92,7 @@ public class TicketRepositoryImpl implements TicketRepository {
             ticket.setUser(userRepository.getById(resultSet.getLong("user_id")));
             ticket.setEvent(eventRepository.getById(resultSet.getLong("event_id")));
             ticket.setSeat(resultSet.getInt("seat"));
-            ticket.setDateTime(LocalDateTime.ofInstant(resultSet.getDate("date_time").toInstant(),
-                    ZoneId.systemDefault()));
+            ticket.setDateTime(resultSet.getDate("date_time").toLocalDate().atStartOfDay());
             return ticket;
         }
     }

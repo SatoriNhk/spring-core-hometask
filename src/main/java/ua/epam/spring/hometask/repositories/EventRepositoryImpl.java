@@ -32,7 +32,7 @@ public class EventRepositoryImpl implements EventRepository {
                     sql,
                     event.getName(),
                     event.getBasePrice(),
-                    event.getRating(),
+                    event.getRating().ordinal(),
                     event.getId()
             );
             return event;
@@ -42,7 +42,7 @@ public class EventRepositoryImpl implements EventRepository {
                     sql,
                     event.getName(),
                     event.getBasePrice(),
-                    event.getRating());
+                    event.getRating().ordinal());
             return event;
         }
     }
