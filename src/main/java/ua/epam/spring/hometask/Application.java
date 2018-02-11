@@ -3,7 +3,10 @@ package ua.epam.spring.hometask;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import ua.epam.spring.hometask.config.AppConfig;
+import ua.epam.spring.hometask.domain.Event;
+import ua.epam.spring.hometask.domain.EventRating;
 import ua.epam.spring.hometask.domain.User;
+import ua.epam.spring.hometask.repositories.EventRepositoryImpl;
 import ua.epam.spring.hometask.repositories.UserRepositoryImpl;
 
 import java.sql.SQLException;
@@ -26,6 +29,13 @@ public class Application {
         userRepository.save(user);
 
         System.out.println(userRepository.getUserByEmail("annaMalah@gmail.com").getFirstName());
+
+        EventRepositoryImpl eventRepository = ctx.getBean(EventRepositoryImpl.class);
+        Event expectedEvent = new Event();
+        expectedEvent.setName("ElkiTest");
+        expectedEvent.setBasePrice(300);
+        expectedEvent.setRating(EventRating.LOW);
+        eventRepository.save(expectedEvent);
 
     }
 }
