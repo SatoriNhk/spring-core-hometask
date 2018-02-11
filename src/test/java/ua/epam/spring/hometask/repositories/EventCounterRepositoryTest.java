@@ -2,15 +2,11 @@ package ua.epam.spring.hometask.repositories;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import ua.epam.spring.hometask.domain.Event;
-import ua.epam.spring.hometask.domain.EventRating;
-
-import static org.junit.Assert.*;
 
 public class EventCounterRepositoryTest {
 
     @Autowired
-    EventCounterRepository eventCounterRepositoryT;
+    EventCounterRepository eventCounterRepository;
 
     @Test
     public void getCallingsByName() throws Exception {

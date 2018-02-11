@@ -1,6 +1,5 @@
 package ua.epam.spring.hometask.config;
 
-import org.hsqldb.util.DatabaseManagerSwing;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -31,6 +30,6 @@ public class DBConfig {
 
     @PostConstruct
     public void startDBManager() throws Exception {
-        DatabaseManagerSwing.main(new String[]{"--url", "jdbc:h2:mem:testdb", "--user", "sa", "--password", ""});
+        //DatabaseManagerSwing.main(new String[]{"--url", "jdbc:h2:mem:testdb", "--user", "sa", "--password", ""});
     }
 }

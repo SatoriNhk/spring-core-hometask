@@ -3,6 +3,7 @@ package ua.epam.spring.hometask.repositories;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import ua.epam.spring.hometask.AbstractTest;
 import ua.epam.spring.hometask.domain.Event;
@@ -10,15 +11,15 @@ import ua.epam.spring.hometask.domain.EventRating;
 import ua.epam.spring.hometask.domain.Ticket;
 import ua.epam.spring.hometask.domain.User;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
 public class TicketRepositoryImplTest extends AbstractTest {
 
     @Autowired
@@ -39,9 +40,8 @@ public class TicketRepositoryImplTest extends AbstractTest {
 
     @Test
     public void saveTestInsert() throws Exception {
-        User testDataUser = userRepositoryImpl.getById(3L);
+        User testDataUser = userRepositoryImpl.getById(1L);
         Event testDataEvent = eventRepositoryImpl.getById(3L);
-        testDataEvent.setId(3L);
 
         Ticket expectedTicket = new Ticket();
         expectedTicket.setUser(testDataUser);
@@ -49,27 +49,29 @@ public class TicketRepositoryImplTest extends AbstractTest {
         expectedTicket.setEvent(testDataEvent);
         expectedTicket.setDateTime(LocalDateTime.of(2017,10,14,00,0,0));
         ticketRepositoryImpl.save(expectedTicket);
-        //BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        //reader.readLine();
-        Ticket actualTicket = ticketRepositoryImpl.getById(5L);
-        assertEquals(expectedTicket, actualTicket);
+        expectedTicket.setId(16L);
+        Ticket actualTicket = ticketRepositoryImpl.getById(16L);
+        assertEquals(expectedTicket.getUser().getId(), actualTicket.getUser().getId());
+        assertEquals(expectedTicket.getSeat(), actualTicket.getSeat());
+        assertEquals(expectedTicket.getId(), actualTicket.getId());
     }
 
     @Test
     public void saveTestUpdate() throws Exception {
-        User testDataUser = userRepositoryImpl.getById(3L);
+        User testDataUser = userRepositoryImpl.getById(1L);
         Event testDataEvent = eventRepositoryImpl.getById(3L);
-        //testDataEvent.setId(3L);
 
         Ticket expectedTicket = new Ticket();
+        expectedTicket.setId(5L);
         expectedTicket.setUser(testDataUser);
-        expectedTicket.setSeat(40);
+        expectedTicket.setSeat(50);
         expectedTicket.setEvent(testDataEvent);
         expectedTicket.setDateTime(LocalDateTime.of(2017,10,14,00,0,0));
         ticketRepositoryImpl.save(expectedTicket);
-
         Ticket actualTicket = ticketRepositoryImpl.getById(5L);
-        assertEquals(expectedTicket, actualTicket);
+        assertEquals(expectedTicket.getUser().getId(), actualTicket.getUser().getId());
+        assertEquals(expectedTicket.getSeat(), actualTicket.getSeat());
+        assertEquals(expectedTicket.getId(), actualTicket.getId());
     }
 
     @Test
