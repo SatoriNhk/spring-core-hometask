@@ -47,7 +47,7 @@ public class EventRepositoryImplTest extends AbstractTest {
     public void getById() throws Exception {
         Event expectedEvent = new Event();
         expectedEvent.setName("Elki");
-        expectedEvent.setBasePrice(300);
+        expectedEvent.setBasePrice(400);
         expectedEvent.setRating(EventRating.LOW);
         expectedEvent.setId(3L);
         Event actualEvent = eventRepositoryImpl.getById(3L);

@@ -75,6 +75,7 @@ public class EventRepositoryImpl implements EventRepository {
         @Override
         public Event mapRow(ResultSet resultSet, int rowNum) throws SQLException {
             Event event = new Event();
+            event.setId(resultSet.getLong("id"));
             event.setName(resultSet.getString("name"));
             event.setBasePrice(resultSet.getDouble("base_price"));
             event.setRating(EventRating.values()[resultSet.getInt("rating")]);

@@ -89,6 +89,7 @@ public class TicketRepositoryImpl implements TicketRepository {
         @Override
         public Ticket mapRow(ResultSet resultSet, int rowNum) throws SQLException {
             Ticket ticket = new Ticket();
+            ticket.setId(resultSet.getLong("id"));
             ticket.setUser(userRepository.getById(resultSet.getLong("user_id")));
             ticket.setEvent(eventRepository.getById(resultSet.getLong("event_id")));
             ticket.setSeat(resultSet.getInt("seat"));
