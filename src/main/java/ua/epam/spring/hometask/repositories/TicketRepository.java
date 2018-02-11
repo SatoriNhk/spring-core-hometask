@@ -1,25 +1,13 @@
 package ua.epam.spring.hometask.repositories;
 
-import org.springframework.stereotype.Component;
 import ua.epam.spring.hometask.domain.Ticket;
+import ua.epam.spring.hometask.domain.User;
 
-import java.util.HashSet;
-import java.util.Set;
+import javax.annotation.Nonnull;
+import java.util.List;
 
-@Component
-public class TicketRepository {
 
-    private static Set<Ticket> tickets = new HashSet<>();
+public interface TicketRepository extends AbstractRepository<Ticket> {
 
-    public Set<Ticket> getAll() {
-        return tickets;
-    }
-
-    public void remove(Ticket ticket){
-        tickets.remove(ticket);
-    }
-
-    public void save(Ticket ticket){
-        tickets.add(ticket);
-    }
+    List<Ticket> getByUser(@Nonnull User user);
 }

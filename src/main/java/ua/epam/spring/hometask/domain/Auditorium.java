@@ -1,8 +1,5 @@
 package ua.epam.spring.hometask.domain;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Objects;

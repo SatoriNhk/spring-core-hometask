@@ -19,7 +19,6 @@ public class DiscountAspect {
         this.discountCounter = discountCounter;
     }
 
-
     @After("execution(*  ua.epam.spring.hometask.service.DiscountStrategyServiceTenthTicketImpl.getDiscount())")
     private void countTenthTicketDiscountsPerUser(JoinPoint jp) throws Exception {
         discountCounter.addTenthTicketDiscountPerUser((User) jp.getArgs()[0]);

@@ -10,12 +10,9 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.DriverManager;
 
 @Configuration
 public class DBConfig {
-    // jdbc:h2:mem:testdb
     @Bean
     public DataSource dataSource() {
         EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
@@ -34,14 +31,6 @@ public class DBConfig {
 
     @PostConstruct
     public void startDBManager() throws Exception {
-        System.out.println("hey");
-        Class.forName("org.h2.Driver");
-
-        //h2
         DatabaseManagerSwing.main(new String[]{"--url", "jdbc:h2:mem:testdb", "--user", "sa", "--password", ""});
-
-        System.out.println("hey");
-
     }
-
 }

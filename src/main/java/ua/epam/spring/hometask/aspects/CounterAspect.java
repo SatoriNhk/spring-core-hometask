@@ -39,7 +39,7 @@ public class CounterAspect {
 
     @Before("execution(* ua.epam.spring.hometask.service.BookingService.bookTickets(..))")
     private void eventBookedTickets(JoinPoint jp) {
-        Ticket[] tickets = (Ticket[]) jp.getArgs()[0];  //TODO /*!!!!!!!!!!!! */
+        Ticket[] tickets = (Ticket[]) jp.getArgs()[0];
         List<Event> uniqueEvents = Arrays.stream(tickets).map(Ticket::getEvent).distinct().collect(Collectors.toList());
         for (Event event : uniqueEvents
                 ) {

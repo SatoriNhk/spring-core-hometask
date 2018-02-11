@@ -54,9 +54,9 @@ public abstract class AbstractTest {
     private static LocalDateTime localDateTime5 = LocalDateTime.of(LocalDate.of(2017, 10, 20),
             LocalTime.of(0, 30, 0));
 
-    protected static Set<User> users = new HashSet<>();
-    protected static Set<Event> events = new HashSet<>();
-    protected static Set<Ticket> tickets = new HashSet<>();
+    protected static List<User> users = new ArrayList<>();
+    protected static List<Event> events = new ArrayList<>();
+    protected static List<Ticket> tickets = new ArrayList<>();
     protected static Map<String, Auditorium> auditoriumMap = new HashMap<>();
 
     @PostConstruct
@@ -73,7 +73,6 @@ public abstract class AbstractTest {
         user2.setEmail("stebelkov@mail.ru");
         user2.setDateOfBirth(localDate2);
 
-        users = new HashSet<>();
         users.add(user1);
         users.add(user2);
 
@@ -131,7 +130,6 @@ public abstract class AbstractTest {
         events.add(event2);
         events.add(event3);
 
-        tickets = new HashSet<>();
         for (int i = 40; i < 55; i++) {
             user1Tickets.add(new Ticket(user1, event3, localDateTime2, i));
         }

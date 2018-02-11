@@ -2,24 +2,12 @@ package ua.epam.spring.hometask;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ua.epam.spring.hometask.config.AppConfig;
-import ua.epam.spring.hometask.domain.Auditorium;
-import ua.epam.spring.hometask.service.AuditoriumService;
-import ua.epam.spring.hometask.service.AuditoriumServiceImpl;
-import ua.epam.spring.hometask.service.DiscountServiceImpl;
-import ua.epam.spring.hometask.service.UserServiceImpl;
+import ua.epam.spring.hometask.domain.User;
+import ua.epam.spring.hometask.repositories.UserRepositoryImpl;
 
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Arrays;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-import java.util.stream.Collectors;
+import java.time.LocalDate;
 
 public class Application {
     public static void main(String[] args) throws SQLException {
@@ -27,23 +15,17 @@ public class Application {
         //ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
 
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
-        DiscountServiceImpl discountService = ctx.getBean(DiscountServiceImpl.class);
-        System.out.println(Arrays.toString(discountService.getDiscountStrategyList().toArray()));
 
-        AuditoriumServiceImpl auditoriumService = ctx.getBean(AuditoriumServiceImpl.class);
-        System.out.println(Arrays.toString(auditoriumService.getAll().toArray()));
+        UserRepositoryImpl userRepository = ctx.getBean(UserRepositoryImpl.class);
+        User user = new User();
+        user.setId(1L);
+        user.setFirstName("Anna");
+        user.setLastName("Malahova");
+        user.setEmail("annaMalah@gmail.com");
+        user.setDateOfBirth(LocalDate.of(2017, 10, 11));
+        userRepository.save(user);
 
-        Map<String, Auditorium> beansOfType = ctx.getBeansOfType(Auditorium.class);
-        for (Map.Entry<String, Auditorium> entry: beansOfType.entrySet()
-             ) {
-            System.out.println(entry.getKey() + ": " + entry.getValue().getName());
-        }
-
-        Connection conn = DriverManager.
-                getConnection("jdbc:h2:mem:testdb", "sa", "");
-        conn.prepareCall("INSERT INTO event_counter VALUES(1, 1, 1)");
-
-        conn.close();
+        System.out.println(userRepository.getUserByEmail("annaMalah@gmail.com").getFirstName());
 
     }
 }

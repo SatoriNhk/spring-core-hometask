@@ -7,10 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import ua.epam.spring.hometask.AbstractTest;
 
-import static junit.framework.TestCase.assertEquals;
-
-
 import java.time.LocalDateTime;
+
+import static junit.framework.TestCase.assertEquals;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 public class DiscountServiceImplTest extends AbstractTest {

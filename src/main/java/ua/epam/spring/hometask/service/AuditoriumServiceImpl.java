@@ -6,7 +6,6 @@ import ua.epam.spring.hometask.domain.Auditorium;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.Properties;
 import java.util.Set;
 
 @Service

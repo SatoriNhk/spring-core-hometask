@@ -1,43 +1,31 @@
 CREATE TABLE users (
-  id         INTEGER PRIMARY KEY,
+  id         INTEGER AUTO_INCREMENT,
   first_name VARCHAR(30),
   last_name  VARCHAR(30),
+  email      VARCHAR(40),
   birthday   TIMESTAMP
 );
 
 CREATE TABLE events (
-  id         INTEGER PRIMARY KEY,
+  id         INTEGER AUTO_INCREMENT PRIMARY KEY,
   name       VARCHAR(30),
   base_price DOUBLE,
   rating     INTEGER
 );
 
 CREATE TABLE tickets (
-  id        INTEGER PRIMARY KEY,
-  seat      INTEGER,
-  date_time TIMESTAMP,
+  id        INTEGER AUTO_INCREMENT PRIMARY KEY,
   user_id   INTEGER,
   FOREIGN KEY (user_id) REFERENCES users (id),
   event_id  INTEGER,
-  FOREIGN KEY (event_id) REFERENCES events (id)
-);
-
-CREATE TABLE event_get_by_name_counter (
-  id                 INTEGER PRIMARY KEY,
-  event_id           INTEGER,
   FOREIGN KEY (event_id) REFERENCES events (id),
-  count              BIGINT
+  date_time TIMESTAMP,
+  seat      INTEGER,
 );
 
-CREATE TABLE event_get_price_counter (
+CREATE TABLE event_counter (
   id                 INTEGER PRIMARY KEY,
-  event_id           INTEGER,
-  FOREIGN KEY (event_id) REFERENCES events (id),
-  count              BIGINT
-);
-
-CREATE TABLE event_booked_tickets_counter (
-  id                 INTEGER PRIMARY KEY,
+  event_counter_case INTEGER,
   event_id           INTEGER,
   FOREIGN KEY (event_id) REFERENCES events (id),
   count              BIGINT
@@ -45,16 +33,15 @@ CREATE TABLE event_booked_tickets_counter (
 
 CREATE TABLE birthday_discount_counter (
   id                INTEGER PRIMARY KEY,
-  count             BIGINT,
   user_id           INTEGER,
-  FOREIGN KEY (user_id) REFERENCES users (id),
+  count             BIGINT,
+  FOREIGN KEY (user_id) REFERENCES users (id)
 );
 
 CREATE TABLE tenth_ticket_discount_counter (
   id                INTEGER PRIMARY KEY,
-  count             BIGINT,
   user_id           INTEGER,
+  count             BIGINT,
   FOREIGN KEY (user_id) REFERENCES users (id),
 )
-
 

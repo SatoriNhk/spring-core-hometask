@@ -1,17 +1,16 @@
 package ua.epam.spring.hometask.config;
 
-import org.springframework.context.annotation.*;
-import ua.epam.spring.hometask.repositories.EventRepository;
-import ua.epam.spring.hometask.repositories.TicketRepository;
-import ua.epam.spring.hometask.repositories.UserRepository;
-import ua.epam.spring.hometask.service.*;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.Import;
 
 @Configuration
 @Import(AuditoriumConfig.class)
 @ComponentScan({"ua.epam.spring.hometask"})
 @EnableAspectJAutoProxy
 public class AppConfig {
-    @Bean
+    /*@Bean
     public EventServiceImpl eventService() {
         return new EventServiceImpl(eventRepository());
     }
@@ -22,17 +21,18 @@ public class AppConfig {
     }
 
     @Bean
-    public EventRepository eventRepository() {
-        return new EventRepository();
+    public UserRepository userRepository() {
+        return new UserRepositoryImpl();
     }
 
     @Bean
     public TicketRepository ticketRepository() {
-        return new TicketRepository();
+        return new TicketRepositoryImpl();
     }
 
     @Bean
-    public UserRepository userRepository() {
-        return new UserRepository();
-    }
+    public EventRepository eventRepository() {
+        return new EventRepositoryImpl();
+    }*/
+
 }
