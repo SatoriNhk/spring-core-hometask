@@ -35,7 +35,7 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public User save(@Nonnull User user) {
         if (user.getId() != null) {
-            String sql = "UPDATE users SET first_name = ?, last_name = ?, email = ?, birthday = ? where id = ?";
+            String sql = "UPDATE users SET first_name = ?, last_name = ?, email = ?, birthday = ? WHERE id = ?";
             jdbcTemplate.update(
                     sql,
                     user.getFirstName(),
@@ -44,8 +44,7 @@ public class UserRepositoryImpl implements UserRepository {
                     Timestamp.valueOf(user.getDateOfBirth().atStartOfDay()),
                     user.getId()
             );
-        }
-        else {
+        } else {
             String sql = "INSERT INTO users(first_name, last_name, email, birthday) VALUES (?, ?, ?, ?)";
             jdbcTemplate.update(
                     sql,

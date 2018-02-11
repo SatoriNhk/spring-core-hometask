@@ -2,36 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0469cf88-094c-4b2e-879d-3dcd2494903b" name="Default" comment="HomeTask#03">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/EventCounterCases.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/BirthdayDiscountCounterRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/EventCounterRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TenthTicketDiscountCounterRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/Application.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/aspects/CounterAspect.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/aspects/CounterAspect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/aspects/DiscountAspect.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/aspects/DiscountAspect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/config/AppConfig.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/config/AppConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/config/DBConfig.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/config/DBConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/DiscountCounter.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/DiscountCounter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/EventCounter.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/EventCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/domain/Auditorium.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/domain/Auditorium.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/domain/Event.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/domain/Event.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/domain/Ticket.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/domain/Ticket.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/domain/User.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/domain/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/AbstractRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/AbstractRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/EventRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/EventRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/EventRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/EventRepositoryImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TicketRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TicketRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TenthTicketDiscountCounterRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TenthTicketDiscountCounterRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TicketRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TicketRepositoryImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/UserRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/UserRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/UserRepositoryImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/service/AuditoriumServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/service/AuditoriumServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/service/DiscountStrategyServiceBirthdayImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/service/DiscountStrategyServiceBirthdayImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/database/create-db.sql" afterPath="$PROJECT_DIR$/src/main/resources/database/create-db.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/database/insert-data.sql" afterPath="$PROJECT_DIR$/src/main/resources/database/insert-data.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ua/epam/spring/hometask/AbstractTest.java" afterPath="$PROJECT_DIR$/src/test/java/ua/epam/spring/hometask/AbstractTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ua/epam/spring/hometask/service/AuditoriumServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/ua/epam/spring/hometask/service/AuditoriumServiceImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ua/epam/spring/hometask/service/DiscountServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/ua/epam/spring/hometask/service/DiscountServiceImplTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,36 +41,80 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TicketRepositoryImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TicketRepositoryImpl.java">
+      <file leaf-file-name="BirthdayDiscountCounterRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/BirthdayDiscountCounterRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="50" column="60" lean-forward="true" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="60" />
+            <state relative-caret-position="285">
+              <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1518313786473" expanded="true" signature="1224:1263" ph="SELECT * FRO... tickets" />
-                <marker date="1518313786473" expanded="true" signature="1522:1604" ph="UPDATE ticke... " />
-                <marker date="1518313786473" expanded="true" signature="1958:2033" ph="INSERT INTO tickets... " />
-                <marker date="1518313786473" expanded="true" signature="2412:2444" ph="DELETE FROM " />
-                <marker date="1518313786473" expanded="true" signature="2600:2634" ph="SELECT FROM tickets... " />
-                <marker date="1518313786473" expanded="true" signature="2828:2849" ph="SELECT * FRO... tickets" />
+                <marker date="1518313786306" expanded="true" signature="627:691" ph="UPDATE birth... " />
+                <marker date="1518313786306" expanded="true" signature="804:871" ph="INSERT INTO discount_counter... " />
+                <marker date="1518313786306" expanded="true" signature="1026:1083" ph="SELECT * FRO... birthday_discount_counter" />
+                <marker date="1518313786306" expanded="true" signature="1039:1065" ph="INSERT INTO birthday_discount_counter... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventRepositoryImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/EventRepositoryImpl.java">
+      <file leaf-file-name="EventCounterRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/EventCounterRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+            <state relative-caret-position="304">
+              <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1518313786656" expanded="true" signature="923:990" ph="UPDATE event... " />
-                <marker date="1518313786656" expanded="true" signature="1295:1356" ph="INSERT INTO events... " />
-                <marker date="1518313786656" expanded="true" signature="1662:1693" ph="DELETE FROM " />
-                <marker date="1518313786656" expanded="true" signature="1847:1880" ph="SELECT * FRO... events" />
-                <marker date="1518313786656" expanded="true" signature="2072:2092" ph="SELECT * FRO... events" />
+                <marker date="1518313786755" expanded="true" signature="609:681" ph="SELECT * FRO... event_counter" />
+                <marker date="1518313786755" expanded="true" signature="997:1069" ph="SELECT * FRO... event_counter" />
+                <marker date="1518313786755" expanded="true" signature="1388:1460" ph="SELECT * FRO... event_counter" />
+                <marker date="1518313786755" expanded="true" signature="1860:1940" ph="UPDATE event... " />
+                <marker date="1518313786755" expanded="true" signature="1987:2067" ph="UPDATE event... " />
+                <marker date="1518313786755" expanded="true" signature="2333:2413" ph="UPDATE event... " />
+                <marker date="1518313786755" expanded="true" signature="2460:2540" ph="UPDATE event... " />
+                <marker date="1518313786755" expanded="true" signature="2809:2889" ph="UPDATE event... " />
+                <marker date="1518313786755" expanded="true" signature="2936:3016" ph="UPDATE event... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRepositoryImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/UserRepositoryImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="69" column="13" lean-forward="false" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1518313888034" expanded="true" signature="875:910" ph="SELECT * FRO... users" />
+                <marker date="1518313888034" expanded="true" signature="1151:1235" ph="UPDATE users... " />
+                <marker date="1518313888034" expanded="true" signature="1582:1659" ph="INSERT INTO users... " />
+                <marker date="1518313888034" expanded="true" signature="2048:2078" ph="DELETE FROM " />
+                <marker date="1518313888034" expanded="true" signature="2230:2262" ph="SELECT * FRO... users" />
+                <marker date="1518313888034" expanded="true" signature="2450:2469" ph="SELECT * FRO... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DiscountCounter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/DiscountCounter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventCounter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/EventCounter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,19 +123,69 @@
       <file leaf-file-name="CounterAspect.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/aspects/CounterAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="41" column="54" lean-forward="false" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+            <state relative-caret-position="266">
+              <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiscountAspect.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DiscountAspect.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/aspects/DiscountAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="45" column="40" lean-forward="true" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+            <state relative-caret-position="304">
+              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventRepositoryImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/EventRepositoryImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1518313887935" expanded="true" signature="923:990" ph="UPDATE event... " />
+                <marker date="1518313887935" expanded="true" signature="1287:1348" ph="INSERT INTO events... " />
+                <marker date="1518313887935" expanded="true" signature="1654:1685" ph="DELETE FROM " />
+                <marker date="1518313887935" expanded="true" signature="1839:1872" ph="SELECT * FRO... events" />
+                <marker date="1518313887935" expanded="true" signature="2064:2084" ph="SELECT * FRO... events" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TenthTicketDiscountCounterRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TenthTicketDiscountCounterRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1518313887884" expanded="true" signature="633:701" ph="UPDATE tenth... " />
+                <marker date="1518313887884" expanded="true" signature="806:877" ph="INSERT INTO tenth_ticket_discount_counter... " />
+                <marker date="1518313887884" expanded="true" signature="1032:1093" ph="SELECT * FRO... tenth_ticket_discount_counter" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TicketRepositoryImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TicketRepositoryImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="54" column="16" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1518313887909" expanded="true" signature="1224:1263" ph="SELECT * FRO... tickets" />
+                <marker date="1518313887909" expanded="true" signature="1522:1604" ph="UPDATE ticke... " />
+                <marker date="1518313887909" expanded="true" signature="1950:2025" ph="INSERT INTO tickets... " />
+                <marker date="1518313887909" expanded="true" signature="2404:2436" ph="DELETE FROM " />
+                <marker date="1518313887909" expanded="true" signature="2592:2626" ph="SELECT FROM tickets... " />
+                <marker date="1518313887909" expanded="true" signature="2820:2841" ph="SELECT * FRO... tickets" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,14 +273,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/database/create-db.sql" />
         <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/aspects/DiscountAspect.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/aspects/CounterAspect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/DiscountCounter.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/BirthdayDiscountCounterRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TenthTicketDiscountCounterRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/EventCounterRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/EventCounter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/UserRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TicketRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/EventRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TicketRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/EventCounter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/DiscountCounter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TenthTicketDiscountCounterRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/UserRepositoryImpl.java" />
       </list>
     </option>
   </component>
@@ -632,7 +703,7 @@
       <workItem from="1517761892579" duration="7320000" />
       <workItem from="1517769730859" duration="1455000" />
       <workItem from="1518288031581" duration="4939000" />
-      <workItem from="1518299973365" duration="13450000" />
+      <workItem from="1518299973365" duration="13637000" />
     </task>
     <task id="LOCAL-00001" summary="SpringCore Hometask#02">
       <created>1517521136740</created>
@@ -662,7 +733,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518305397508</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="HomeTask#03">
+      <created>1518313817643</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1518313817643</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -698,11 +776,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103425000" />
+    <option name="totallyTimeSpent" value="103612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -713,8 +790,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33844468" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33844468" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1058,21 +1135,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TenthTicketDiscountCounterRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <marker date="1518313786438" expanded="true" signature="633:701" ph="UPDATE tenth... " />
-            <marker date="1518313786438" expanded="true" signature="814:885" ph="INSERT INTO tenth_ticket_discount_counter... " />
-            <marker date="1518313786438" expanded="true" signature="1040:1101" ph="SELECT * FRO... tenth_ticket_discount_counter" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TicketRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1081,66 +1143,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/EventCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/DiscountCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="29" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/EventCounterCases.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/BirthdayDiscountCounterRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <marker date="1518313786306" expanded="true" signature="627:691" ph="UPDATE birth... " />
-            <marker date="1518313786306" expanded="true" signature="804:871" ph="INSERT INTO discount_counter... " />
-            <marker date="1518313786306" expanded="true" signature="1026:1083" ph="SELECT * FRO... birthday_discount_counter" />
-            <marker date="1518313786306" expanded="true" signature="1039:1065" ph="INSERT INTO birthday_discount_counter... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/EventCounterRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1518313786755" expanded="true" signature="609:681" ph="SELECT * FRO... event_counter" />
-            <marker date="1518313786755" expanded="true" signature="997:1069" ph="SELECT * FRO... event_counter" />
-            <marker date="1518313786755" expanded="true" signature="1388:1460" ph="SELECT * FRO... event_counter" />
-            <marker date="1518313786755" expanded="true" signature="1860:1940" ph="UPDATE event... " />
-            <marker date="1518313786755" expanded="true" signature="1987:2067" ph="UPDATE event... " />
-            <marker date="1518313786755" expanded="true" signature="2333:2413" ph="UPDATE event... " />
-            <marker date="1518313786755" expanded="true" signature="2460:2540" ph="UPDATE event... " />
-            <marker date="1518313786755" expanded="true" signature="2809:2889" ph="UPDATE event... " />
-            <marker date="1518313786755" expanded="true" signature="2936:3016" ph="UPDATE event... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1160,66 +1167,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/UserRepositoryImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/BirthdayDiscountCounterRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+        <state relative-caret-position="285">
+          <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1518313786689" expanded="true" signature="875:910" ph="SELECT * FRO... users" />
-            <marker date="1518313786689" expanded="true" signature="1151:1235" ph="UPDATE users... " />
-            <marker date="1518313786689" expanded="true" signature="1590:1667" ph="INSERT INTO users... " />
-            <marker date="1518313786689" expanded="true" signature="2056:2086" ph="DELETE FROM " />
-            <marker date="1518313786689" expanded="true" signature="2238:2270" ph="SELECT * FRO... users" />
-            <marker date="1518313786689" expanded="true" signature="2458:2477" ph="SELECT * FRO... users" />
+            <marker date="1518313786306" expanded="true" signature="627:691" ph="UPDATE birth... " />
+            <marker date="1518313786306" expanded="true" signature="804:871" ph="INSERT INTO discount_counter... " />
+            <marker date="1518313786306" expanded="true" signature="1026:1083" ph="SELECT * FRO... birthday_discount_counter" />
+            <marker date="1518313786306" expanded="true" signature="1039:1065" ph="INSERT INTO birthday_discount_counter... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TicketRepositoryImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/EventCounterRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="50" column="60" lean-forward="true" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="60" />
+        <state relative-caret-position="304">
+          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1518313786473" expanded="true" signature="1224:1263" ph="SELECT * FRO... tickets" />
-            <marker date="1518313786473" expanded="true" signature="1522:1604" ph="UPDATE ticke... " />
-            <marker date="1518313786473" expanded="true" signature="1958:2033" ph="INSERT INTO tickets... " />
-            <marker date="1518313786473" expanded="true" signature="2412:2444" ph="DELETE FROM " />
-            <marker date="1518313786473" expanded="true" signature="2600:2634" ph="SELECT FROM tickets... " />
-            <marker date="1518313786473" expanded="true" signature="2828:2849" ph="SELECT * FRO... tickets" />
+            <marker date="1518313786755" expanded="true" signature="609:681" ph="SELECT * FRO... event_counter" />
+            <marker date="1518313786755" expanded="true" signature="997:1069" ph="SELECT * FRO... event_counter" />
+            <marker date="1518313786755" expanded="true" signature="1388:1460" ph="SELECT * FRO... event_counter" />
+            <marker date="1518313786755" expanded="true" signature="1860:1940" ph="UPDATE event... " />
+            <marker date="1518313786755" expanded="true" signature="1987:2067" ph="UPDATE event... " />
+            <marker date="1518313786755" expanded="true" signature="2333:2413" ph="UPDATE event... " />
+            <marker date="1518313786755" expanded="true" signature="2460:2540" ph="UPDATE event... " />
+            <marker date="1518313786755" expanded="true" signature="2809:2889" ph="UPDATE event... " />
+            <marker date="1518313786755" expanded="true" signature="2936:3016" ph="UPDATE event... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/EventRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+        <state relative-caret-position="343">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1518313786656" expanded="true" signature="923:990" ph="UPDATE event... " />
-            <marker date="1518313786656" expanded="true" signature="1295:1356" ph="INSERT INTO events... " />
-            <marker date="1518313786656" expanded="true" signature="1662:1693" ph="DELETE FROM " />
-            <marker date="1518313786656" expanded="true" signature="1847:1880" ph="SELECT * FRO... events" />
-            <marker date="1518313786656" expanded="true" signature="2072:2092" ph="SELECT * FRO... events" />
+            <marker date="1518313887935" expanded="true" signature="923:990" ph="UPDATE event... " />
+            <marker date="1518313887935" expanded="true" signature="1287:1348" ph="INSERT INTO events... " />
+            <marker date="1518313887935" expanded="true" signature="1654:1685" ph="DELETE FROM " />
+            <marker date="1518313887935" expanded="true" signature="1839:1872" ph="SELECT * FRO... events" />
+            <marker date="1518313887935" expanded="true" signature="2064:2084" ph="SELECT * FRO... events" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TicketRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="54" column="16" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1518313887909" expanded="true" signature="1224:1263" ph="SELECT * FRO... tickets" />
+            <marker date="1518313887909" expanded="true" signature="1522:1604" ph="UPDATE ticke... " />
+            <marker date="1518313887909" expanded="true" signature="1950:2025" ph="INSERT INTO tickets... " />
+            <marker date="1518313887909" expanded="true" signature="2404:2436" ph="DELETE FROM " />
+            <marker date="1518313887909" expanded="true" signature="2592:2626" ph="SELECT FROM tickets... " />
+            <marker date="1518313887909" expanded="true" signature="2820:2841" ph="SELECT * FRO... tickets" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/DiscountCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/counters/EventCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/aspects/CounterAspect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="41" column="54" lean-forward="false" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+        <state relative-caret-position="266">
+          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/aspects/DiscountAspect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="45" column="40" lean-forward="true" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+        <state relative-caret-position="304">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/TenthTicketDiscountCounterRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1518313887884" expanded="true" signature="633:701" ph="UPDATE tenth... " />
+            <marker date="1518313887884" expanded="true" signature="806:877" ph="INSERT INTO tenth_ticket_discount_counter... " />
+            <marker date="1518313887884" expanded="true" signature="1032:1093" ph="SELECT * FRO... tenth_ticket_discount_counter" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/epam/spring/hometask/repositories/UserRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="69" column="13" lean-forward="false" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1518313888034" expanded="true" signature="875:910" ph="SELECT * FRO... users" />
+            <marker date="1518313888034" expanded="true" signature="1151:1235" ph="UPDATE users... " />
+            <marker date="1518313888034" expanded="true" signature="1582:1659" ph="INSERT INTO users... " />
+            <marker date="1518313888034" expanded="true" signature="2048:2078" ph="DELETE FROM " />
+            <marker date="1518313888034" expanded="true" signature="2230:2262" ph="SELECT * FRO... users" />
+            <marker date="1518313888034" expanded="true" signature="2450:2469" ph="SELECT * FRO... users" />
+          </folding>
         </state>
       </provider>
     </entry>

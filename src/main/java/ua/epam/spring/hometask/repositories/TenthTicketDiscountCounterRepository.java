@@ -19,8 +19,7 @@ public class TenthTicketDiscountCounterRepository {
         if (this.getDiscountsNumberByUser(user) != null) {
             String sql = "UPDATE tenth_ticket_discount_counter SET count = ? WHERE user_id = ?";
             jdbcTemplate.update(sql, count, user.getId());
-        }
-        else {
+        } else {
             String sql = "INSERT INTO tenth_ticket_discount_counter(user_id, count) VALUES (?, ?)";
             jdbcTemplate.update(sql, user.getId(), count);
         }

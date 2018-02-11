@@ -19,8 +19,7 @@ public class EventCounter {
         Long currentCount = eventCounterRepository.getCallingsByName(event);
         if (currentCount != null) {
             eventCounterRepository.putCallingsByName(event, currentCount + 1);
-        }
-        else {
+        } else {
             eventCounterRepository.putCallingsByName(event, 1L);
         }
     }
@@ -29,8 +28,7 @@ public class EventCounter {
         Long currentCount = eventCounterRepository.getCallingsByBooking(event);
         if (currentCount != null) {
             eventCounterRepository.putCallingsByBooking(event, currentCount + 1);
-        }
-        else {
+        } else {
             eventCounterRepository.putCallingsByBooking(event, 1L);
         }
     }
@@ -39,8 +37,7 @@ public class EventCounter {
         Long currentCount = eventCounterRepository.getCallingsByPrice(event);
         if (currentCount != null) {
             eventCounterRepository.putCallingsByPrice(event, currentCount + 1);
-        }
-        else {
+        } else {
             eventCounterRepository.putCallingsByPrice(event, 1L);
         }
     }

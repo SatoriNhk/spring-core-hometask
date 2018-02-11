@@ -24,8 +24,7 @@ public class DiscountCounter {
         Long currentCount = birthdayDiscountCounterRepository.getDiscountsNumberByUser(user);
         if (currentCount != null) {
             birthdayDiscountCounterRepository.save(user, currentCount + 1);
-        }
-        else {
+        } else {
             birthdayDiscountCounterRepository.save(user, 1L);
         }
     }
@@ -34,8 +33,7 @@ public class DiscountCounter {
         Long currentCount = tenthTicketDiscountCounterRepository.getDiscountsNumberByUser(user);
         if (currentCount != null) {
             tenthTicketDiscountCounterRepository.save(user, currentCount + 1);
-        }
-        else {
+        } else {
             tenthTicketDiscountCounterRepository.save(user, 1L);
         }
     }

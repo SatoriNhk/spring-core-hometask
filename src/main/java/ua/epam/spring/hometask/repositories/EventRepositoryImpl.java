@@ -36,8 +36,7 @@ public class EventRepositoryImpl implements EventRepository {
                     event.getId()
             );
             return event;
-        }
-        else {
+        } else {
             String sql = "INSERT INTO events(name, base_price, rating) VALUES (?, ?, ?)";
             jdbcTemplate.update(
                     sql,

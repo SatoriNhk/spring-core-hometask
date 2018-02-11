@@ -52,8 +52,7 @@ public class TicketRepositoryImpl implements TicketRepository {
                     ticket.getSeat(),
                     ticket.getId()
             );
-        }
-        else {
+        } else {
             String sql = "INSERT INTO tickets(user_id, event_id, date_time, seat) VALUES (?, ?, ?, ?)";
             jdbcTemplate.update(
                     sql,
